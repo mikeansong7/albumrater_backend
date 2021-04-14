@@ -14,7 +14,7 @@ made_in_lagos= Album.create(name:"Made in Lagos", artist:"WizKid", genre:"AfroBe
 graduation= Album.create(name:"Graduation", artist:"Kanye West", genre: "Rap")
 limbo= Album.create(name:"Limbo", artist:"Amine", genre:"Rap")
 astroworld= Album.create(name:"Astroworld", artist:"Travis Scott", genre:"Rap")
-views= Album.create(name:"Views", artist:"Drake", genre:"Hip Hop")
+views= Album.create(name:"Views", artist:"Drake", genre:"Hip-Hop")
 
 
 ######User seed data#######
