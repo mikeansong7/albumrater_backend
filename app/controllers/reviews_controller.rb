@@ -15,7 +15,10 @@ class ReviewsController < ApplicationController
     end
 
     def create 
-        @review = Review.create(review_params)
+        album= Album.find_or_create_by(spotify:params[:album]["spotify"],artist:params[:album]["artist"],name:params[:album]["name"])
+        @review = Review.new(review_params)
+        @review[:album_id] = album.id 
+        @review.save
         render json: @review
     end
 
@@ -38,7 +41,7 @@ class ReviewsController < ApplicationController
 
     private
     def review_params
-        params.permit(:album_id, :user_id, :post, :rating)
+        params.permit( :user_id, :post, :rating)
     end
 
 end
